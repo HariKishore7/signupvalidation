@@ -1,0 +1,17 @@
+.hole{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-size: 30px;
+    
+       
+}
+
+input.ng-touched.ng-invalid{
+    border:1px solid red;
+}
+.error{
+    color: red;
+    font-size: 12px;
+}

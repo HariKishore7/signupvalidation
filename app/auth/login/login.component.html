@@ -1,0 +1,30 @@
+
+ <div class="row hole">
+    <div class="col-sm-4" ></div>
+    <div class="col-sm-4 center" style="text-align:center">
+
+        <form #userlogin = "ngForm" (ngSubmit) = "onSubmit(userlogin.value)">
+        <div class="form-group row">
+         
+          <div class="col-sm-10">
+            <input type="email"  class="form-control" id="inputEmail" placeholder="Email" name="email" ngModel email required  #email="ngModel">
+            <span  class="error" *ngIf="email.touched && !email.valid">Please enter your Email</span>
+          </div>
+       </div>
+        <div class="form-group row">
+          
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" ngModel  required #password="ngModel">
+            <span  class="error" *ngIf="password.touched && !password.valid">Please enter your password</span>
+          </div>
+       </div>
+       <button type="submit" class="btn btn-primary" [disabled]="!userlogin.valid">Login</button>
+        <h6>Dont have an account?<a routerLink="/signup">Register</a></h6>
+
+      </form>
+    </div>
+    <div class="col-sm-4"></div>
+    
+</div>
+
+  
